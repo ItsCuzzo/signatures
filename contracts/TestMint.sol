@@ -41,7 +41,7 @@ contract TestMint is Ownable, ERC721 {
 
         tokensMinted[msg.sender] += numTokens;
 
-        for (uint256 i = 0; i <= numTokens; i++) {
+        for (uint256 i=0; i<numTokens; i++) {
             _tokenIdCounter.increment();
             _safeMint(msg.sender, _tokenIdCounter.current());
         }
